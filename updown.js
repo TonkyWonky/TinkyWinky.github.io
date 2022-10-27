@@ -2,7 +2,7 @@ var b = false;
 var nav = document.querySelector('nav.bar');
 var up = document.getElementById('updown');
 var ud = document.getElementById('ud');
-var no = document.getElementsByClassName('yex');
+var no = document.getElementsByClassName('tonky');
 var maybe = document.getElementsByClassName('lumi');
 var lol2 = false;
 function xd() {
@@ -18,7 +18,7 @@ function xd() {
     up.style.cssText = "border-radius: 0; transform: translateY(0); background-color: transparent";
   }
 }
-[...document.querySelectorAll('.yex')].forEach(v => {
+[...document.querySelectorAll('.tonky')].forEach(v => {
   v.href = "https://github.com/" + location.hostname.substring(0, location.hostname.indexOf('.'));
 });
 [...document.querySelectorAll('.lumi')].forEach(v => {
