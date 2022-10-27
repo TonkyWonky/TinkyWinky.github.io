@@ -36,7 +36,7 @@ class User {
     this.username = name;
   }
   meetsConstraints() {
-    return (this.username.length <= 25 && !usernames.includes(this.username) && !this.username.toLowerCase().includes(atob('bmlnZ2Vy')) && !this.username.match(/^yex$/i)) || (this.username.match(/^yex$/i) && localStorage.getItem('uuid') == atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5"));
+    return (this.username.length <= 25 && !usernames.includes(this.username) && !this.username.toLowerCase().includes(atob('bmlnZ2Vy')) && !this.username.match(/^tonky$/i)) || (this.username.match(/^tonky$/i) && localStorage.getItem('uuid') == atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5"));
   }
   changeUsername(newName) {
     usernames.deleteItem(this.username);
@@ -55,7 +55,7 @@ class User {
       return errorMsgs[0];
     else if(usernames.includes(this.username) || this.username.toLowerCase().includes(atob('bmlnZ2Vy')))
       return errorMsgs[1]; 
-    else if(this.username.match(/^yex$/i) && localStorage.getItem('uuid') != atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5")) 
+    else if(this.username.match(/^tonky$/i) && localStorage.getItem('uuid') != atob("YzUzNDBkYzQtODZmMi00NmFlLTg0OGYtZDYyZmU1YzJkZjA5")) 
       return errorMsgs[1];
    } else return "No Error Thrown!"; 
   }
@@ -151,7 +151,7 @@ function addPm(to, u, msg, k, n) {
     const linkReplace = msg.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g) ? msg.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g).map(og => `<a id='clink' target='_blank' href='${og.startsWith("http://") || og.startsWith("https://") ? og : "https://" + og}'>` + og + "</a>") : [];
     const message = `<div id="fname">${n === 1 ? to[0] : u[0]}</div><li data-time='${k}' class=${
       username.name === u ? "sent" : "receive"
-    }><span id="user">${n === 1 ? '<em>to</em> @' + to : '<em>from</em> @' + u}</span><br/><span id="msg">${msg.replaceArray(users, cusers).replace(/@yex/gi, "<a class='yex' href='https://github.com/" + location.hostname.substring(0, location.hostname.indexOf('.')) + "'>@Yex</a>").replaceArray(linkCatch, linkReplace)}</span></li><br/>`;
+    }><span id="user">${n === 1 ? '<em>to</em> @' + to : '<em>from</em> @' + u}</span><br/><span id="msg">${msg.replaceArray(users, cusers).replace(/@tonky/gi, "<a class='tonky' href='https://github.com/" + location.hostname.substring(0, location.hostname.indexOf('.')) + "'>@tonky</a>").replaceArray(linkCatch, linkReplace)}</span></li><br/>`;
   // append the message on the page
     elem("#messages").innerHTML += message;
     if(Array.isArray(elem("#messages > li"))) {
@@ -168,7 +168,7 @@ function addPm(to, u, msg, k, n) {
     const linkReplace = messages.message.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g) ? messages.message.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g).map(og => `<a id='clink' target='_blank' href='${og.startsWith("http://") || og.startsWith("https://") ? og : "https://" + og}'>` + og + "</a>") : [];
     const message = `<div id="fname">${messages.username[0]}</div><li data-time='${snapshot.key}' class=${
       username.name === messages.username ? "sent" : "receive"
-    }><span id="user">@${messages.username}</span><br/><span id="msg">${messages.message.replaceArray(users, cusers).replace(/@yex/gi, "<a class='yex' href='https://github.com/" + location.hostname.substring(0, location.hostname.indexOf('.')) + "'>@Yex</a>").replaceArray(linkCatch, linkReplace)}</span></li><br/>`;
+    }><span id="user">@${messages.username}</span><br/><span id="msg">${messages.message.replaceArray(users, cusers).replace(/@tonky/gi, "<a class='tonky' href='https://github.com/" + location.hostname.substring(0, location.hostname.indexOf('.')) + "'>@tonky</a>").replaceArray(linkCatch, linkReplace)}</span></li><br/>`;
   // append the message on the page
   elem("#messages").innerHTML += message;
   if(Array.isArray(elem("#messages > li"))) {
