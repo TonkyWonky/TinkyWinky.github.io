@@ -14,7 +14,7 @@ a {
   box-sizing: border-box;
 }
 
-*:not(#ud, #nav a, a.yex, #nav button, .lumi) {
+*:not(#ud, #nav a, a.tonky, #nav button, .lumi) {
   transition: all 0.5s;
 }
 
@@ -136,7 +136,7 @@ nav.bar a, nav.bar button {
   text-decoration: none;
 }
 
-nav.bar a:not(.yex, .active):hover, nav.bar button:hover {
+nav.bar a:not(.tonky, .active):hover, nav.bar button:hover {
   color: var(--theme-clr);
   text-shadow: 0px 0px 8px var(--theme-clr);
   transform: scale(1.05) translateY(-5%);
@@ -149,7 +149,7 @@ nav.bar .active {
 
 /* Nav Bar Header Link */
 
-nav.bar a.yex {
+nav.bar a.tonky {
   padding: 0px;
   margin-left: 5px;
   float: left;
@@ -157,7 +157,7 @@ nav.bar a.yex {
   font-size: inherit;
 }
 
-nav.bar a.yex:hover {
+nav.bar a.tonky:hover {
   color:white;
   text-shadow: none;
   transform: scale(1.05);
@@ -338,9 +338,9 @@ hr {
   border-color: white;
 }
 
-/* Yex (Text) */
+/* tonky (Text) */
 
-.yex {
+.tonky {
   display: inline-block;
   text-decoration: none;
   cursor:pointer; 
@@ -348,7 +348,7 @@ hr {
   transition: 0.5s transform, 0.5s background;
 }
 
-.yex:hover {
+.tonky:hover {
   transform: scale(1.05);
   font-weight: bolder;
   background: linear-gradient(45deg, purple, blueviolet);
